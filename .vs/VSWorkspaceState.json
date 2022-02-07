@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\vds",
+    "\\src\\vds\\assets",
+    "\\src\\vds\\VdsAlert",
+    "\\src\\vds\\VdsAutocomplete",
+    "\\src\\vds\\VdsDialog",
+    "\\src\\vds\\VdsPageTitle",
+    "\\src\\vds\\VdsSelect",
+    "\\src\\vds\\VdsSwitch"
+  ],
+  "SelectedNode": "\\src\\vds\\VdsSwitch\\VdsSwitch.tsx",
+  "PreviewInSolutionExplorer": false
+}
