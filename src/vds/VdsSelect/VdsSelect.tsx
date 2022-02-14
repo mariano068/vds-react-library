@@ -88,7 +88,7 @@ const StyledSelect = styled(Select, { shouldForwardProp: (props: any) => props }
     'fieldset': { display: 'none' },
 }));
 
-export const VdsSelect = (props: any) => {
+export const VdsSelect = (props: SelectProps) => {
 
     const { label, placeholder, errorText, helperText, children, fullWidth, ...MuiSelectProps } = props;
 
