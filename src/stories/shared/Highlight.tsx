@@ -2,7 +2,7 @@
 import React, { ComponentProps, FunctionComponent, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Prism from 'prismjs';
-import color from '../../vds/assets/palette';
+import color from '../../vds/palette';
 
 if (typeof document !== 'undefined') {
   // @ts-ignore

@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\stories",
     "\\src\\vds"
   ],
+  "SelectedNode": "\\src\\stories\\vds",
   "PreviewInSolutionExplorer": false
 }

@@ -4,4 +4,4 @@ export declare type SelectProps = {
     helperText?: string;
     errorText?: string;
 } & MuiSelectProps;
-export declare const VdsSelect: (props: any) => JSX.Element;
+export declare const VdsSelect: (props: SelectProps) => JSX.Element;

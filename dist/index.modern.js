@@ -14562,69 +14562,57 @@ const withStyles = (stylesOrCreator, options = {}) => Component => {
   return WithStyles;
 };
 
-var primary = {
-    main: '#005075'
-};
-var success = {
-    main: '#09822A'
-};
-var background = {
-    default: '#FFFFFF'
-};
-var text = {
-    primary: '#005075'
-};
-var warning$1 = {
-    main: '#FDB927'
-};
-var error = {
-    main: '#D82829'
-};
 var VdsAlert = withStyles(function () { return ({
     root: {
-        backgroundColor: background.default,
-        color: text.primary,
+        backgroundColor: '#FFFFFF',
+        color: '005075',
         borderRadius: 'unset',
         fontFamily: 'Roboto',
         fontWeight: '400',
-        fontSize: '16px'
+        fontSize: '16px',
     },
     standardInfo: {
-        border: "1px solid " + primary.main,
-        color: primary.main,
-        borderBottom: "3px solid " + primary.main,
+        border: "1px solid #005075",
+        color: '#005075',
+        borderBottom: "3px solid #005075",
         '& .MuiAlert-icon': {
-            fill: primary.main
+            fill: '#005075'
         },
         '& svg': {
-            fill: primary.main
+            fill: '#005075'
         }
     },
     standardSuccess: {
-        border: "1px solid " + success.main,
-        borderBottom: "3px solid " + success.main,
-        color: success.main,
+        border: "1px solid #09822A",
+        borderBottom: "3px solid #09822A",
+        color: '#09822A',
         '& .MuiAlert-icon': {
-            fill: success
+            fill: '#09822A'
+        },
+        '& svg': {
+            fill: '#09822A'
         }
     },
     standardWarning: {
-        border: "1px solid " + warning$1.main,
-        borderBottom: "3px solid " + warning$1.main,
-        color: warning$1.main,
+        border: "1px solid #FDB927",
+        borderBottom: "3px solid #FDB927",
+        color: '#FDB927',
         '& .MuiAlert-icon': {
-            fill: warning$1.main
+            fill: '#FDB927'
+        },
+        '& svg': {
+            fill: '#FDB927'
         }
     },
     standardError: {
-        border: "1px solid " + error.main,
-        borderBottom: "3px solid " + error.main,
-        color: error.main,
+        border: "1px solid #D82829",
+        borderBottom: "3px solid #D82829",
+        color: '#D82829',
         '& .MuiAlert-icon': {
-            fill: error.main
+            fill: '#D82829'
         },
-        '& button': {
-            fill: error.main
+        '& svg': {
+            fill: '#D82829'
         }
     }
 }); })(Alert);
@@ -20854,46 +20842,47 @@ var VdsDatepicker = function (props) {
         React__default.createElement(DatePicker, __assign$1({}, DatepickerProps, { disabled: disabled, customInput: React__default.createElement(FromDateInput, null) }))));
 };
 
-function htmlToText$1(html) {
+var htmlToText$1 = function (html) {
     var temp = document.createElement('div');
     temp.innerHTML = html;
     return temp.textContent;
-}
+};
+
+var StyledChipContainer = styled$2('div')(function () { return ({
+    fontSize: "12px",
+    color: "#005075",
+    letterSpacing: "0",
+    lineHeight: "24px",
+    fontFamily: "Cairo SemiBold",
+    fontWeight: 600,
+    textAlign: "left",
+    padding: '0px 0px 0px 16px',
+    borderRadius: '4px',
+    backgroundColor: '#DEF0F7',
+    display: 'flex',
+    alignItems: 'center',
+    margin: 2,
+    width: 'max-content'
+}); });
+var StyledIconButton$1 = styled$2(IconButton$1)(function () { return ({
+    padding: 0,
+    color: "#005075 !important",
+    fill: "#005075 !important",
+    fontSize: "19.5px",
+    letterSpacing: "0",
+    textAlign: "center",
+    fontWeight: 400,
+    marginLeft: '5px',
+    ':hover': {
+        backgroundColor: 'unset',
+        opacity: 'unset'
+    }
+}); });
 var VdsChip = function (_a) {
     var label = _a.label, onDelete = _a.onDelete, disabled = _a.disabled;
-    return (createElement("div", { style: {
-            fontSize: "12px",
-            color: "#005075",
-            letterSpacing: "0",
-            lineHeight: "24px",
-            fontFamily: "Cairo SemiBold",
-            fontWeight: 600,
-            textAlign: "left",
-            padding: '0px 0px 0px 16px',
-            borderRadius: '4px',
-            backgroundColor: '#DEF0F7',
-            display: 'flex',
-            alignItems: 'center',
-            margin: 2,
-            paddingRight: onDelete ? 0 : '16px'
-        } },
+    return (createElement(StyledChipContainer, { style: { paddingRight: onDelete ? 0 : '16px' } },
         htmlToText$1(label),
-        onDelete && (createElement(IconButton$1, { disabled: disabled, sx: {
-                padding: 0,
-                color: "#005075 !important",
-                fill: "#005075 !important",
-                fontSize: "19.5px",
-                letterSpacing: "0",
-                textAlign: "center",
-                fontWeight: 400,
-                marginLeft: '5px',
-                ':hover': {
-                    backgroundColor: 'unset',
-                    opacity: 'unset'
-                }
-            }, onClick: function () {
-                onDelete();
-            } },
+        onDelete && (createElement(StyledIconButton$1, { disabled: disabled, onClick: onDelete },
             createElement(IoIosClose, null)))));
 };
 
@@ -26644,97 +26633,93 @@ var VdsSwitch = styled$2(Switch)(function (_a) {
 });
 
 var StyledTextFieldContainer$2 = styled$2('div')(function () { return ({
-    'display': 'flex',
-    'minHeight': '96px',
-    'fontFamily': '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-    'flexDirection': 'column',
-    'width': 'initial',
-    'input': { padding: '0 !important' }
+    display: 'flex',
+    minHeight: '96px',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+    flexDirection: 'column',
+    width: 'initial',
+    input: {
+        padding: '0 !important'
+    }
 }); });
 var StyledInfosContainer$3 = styled$2('div')({
-    'marginBottom': '12px',
-    'display': 'flex',
-    'flexDirection': 'column'
+    marginBottom: '12px',
+    display: 'flex',
+    flexDirection: 'column'
 });
 var StyledHelperTextContainer$2 = styled$2('span')(function (_a) {
     var disabled = _a.disabled;
     return ({
-        'fontSize': "12px",
-        'color': disabled ? '#C1C1C4' : "#9DA6AD",
-        'lineHeight': "18px",
-        'fontFamily': "Roboto",
-        'fontWeight': 400,
-        'textAlign': "left"
+        fontSize: "12px",
+        color: disabled ? '#C1C1C4' : "#9DA6AD",
+        lineHeight: "18px",
+        fontFamily: "Roboto",
+        fontWeight: 400,
+        textAlign: "left"
     });
 });
 var StyledLabelContainer$3 = styled$2('span')(function (_a) {
     var disabled = _a.disabled, readOnly = _a.readOnly;
     return ({
-        'fontSize': "14px",
-        'color': readOnly ? "black" : disabled ? "#9DA6AD" : "#152935",
-        'letterSpacing': "0",
-        'lineHeight': "18px",
-        'fontFamily': "Roboto",
-        'fontWeight': 500,
-        'textAlign': "left",
-        'marginBottom': '8px'
+        fontSize: "14px",
+        color: readOnly ? "black" : disabled ? "#9DA6AD" : "#152935",
+        letterSpacing: "0",
+        lineHeight: "18px",
+        fontFamily: "Roboto",
+        fontWeight: 500,
+        textAlign: "left",
+        marginBottom: '8px'
     });
 });
 var StyledInput$1 = styled$2(Input, { shouldForwardProp: function (props) { return props; } })(function (_a) {
     var disabled = _a.disabled, readOnly = _a.readOnly, error = _a.error;
     return ({
-        'border': disabled ? '1px solid #C1C1C4' : readOnly ? '1px solid #C1C1C4' : error ? '1px solid #D82829' : '1px solid #C9D9E8',
-        'backgroundColor': (disabled || readOnly) ? '#FAFBFD' : '#F2F5F8',
-        'padding': '7.5px 14px!important',
-        'font': 'unset',
-        'cursor': disabled ? 'not-allowed!important' : 'text!important',
+        border: disabled ? '1px solid #C1C1C4' : readOnly ? '1px solid #C1C1C4' : error ? '1px solid #D82829' : '1px solid #C9D9E8',
+        backgroundColor: (disabled || readOnly) ? '#FAFBFD' : '#F2F5F8',
+        padding: '7.5px 14px!important',
+        font: 'unset',
+        cursor: disabled ? 'not-allowed!important' : 'text!important',
         '*': {
-            'cursor': disabled ? 'not-allowed!important' : 'text!important'
+            cursor: disabled ? 'not-allowed!important' : 'text!important'
         },
         ':hover': {
-            'border': disabled ? '1px solid #0090D1' : readOnly ? '1px solid #C1C1C4' : error ? '1px solid #D82829' : '1px solid #0090D1!important'
+            border: disabled ? '1px solid #0090D1' : readOnly ? '1px solid #C1C1C4' : error ? '1px solid #D82829' : '1px solid #0090D1!important'
         },
         '::placeholder': {
-            'fontSize': "14px!important",
-            'color': (disabled || readOnly) ? "#C1C1C4" : "#9DA6AD",
-            'lineHeight': "18px",
-            'fontFamily': "Roboto",
-            'fontWeight': 400,
-            'textAlign': "left"
+            fontSize: "14px!important",
+            color: (disabled || readOnly) ? "#C1C1C4" : "#9DA6AD",
+            lineHeight: "18px",
+            fontFamily: "Roboto",
+            fontWeight: 400,
+            textAlign: "left"
         },
         '::before': {
-            'all': 'unset'
+            all: 'unset'
         },
         '::after': {
-            'all': 'unset'
+            all: 'unset'
         }
     });
 });
 var StyledErrorContainer$2 = styled$2('span')({
-    'fontSize': "12px",
-    'color': "#D82829",
-    'lineHeight': "18px",
-    'fontWeight': 400,
+    fontSize: "12px",
+    color: "#D82829",
+    lineHeight: "18px",
+    fontWeight: 400,
     display: 'flex',
     alignItems: 'center',
-    'textAlign': "left"
+    textAlign: "left"
 });
-function htmlToText$2(html) {
-    var temp = document.createElement('div');
-    temp.innerHTML = html;
-    return temp.textContent;
-}
 var VdsTextField = function (props) {
-    var label = props.label, placeholder = props.placeholder, errorText = props.errorText, readOnly = props.readOnly, disabled = props.disabled, helperText = props.helperText, value = props.value, onChange = props.onChange, onKeyPress = props.onKeyPress, error = props.error;
     return (createElement(StyledTextFieldContainer$2, null,
-        (label || helperText) && (createElement(StyledInfosContainer$3, null,
-            label && (createElement(StyledLabelContainer$3, null, label)),
-            helperText && (createElement(StyledHelperTextContainer$2, { disabled: props === null || props === void 0 ? void 0 : props.disabled }, helperText)))),
-        createElement(StyledInput$1, { value: htmlToText$2(value), placeholder: placeholder, disabled: disabled, readOnly: readOnly, error: error, onChange: onChange, onKeyPress: onKeyPress }),
-        error && (createElement(StyledErrorContainer$2, null,
+        (props.label || props.helperText) && (createElement(StyledInfosContainer$3, null,
+            props.label && (createElement(StyledLabelContainer$3, null, props.label)),
+            props.helperText && (createElement(StyledHelperTextContainer$2, { disabled: props === null || props === void 0 ? void 0 : props.disabled }, props.helperText)))),
+        createElement(StyledInput$1, { value: htmlToText$1(props.value), placeholder: props.placeholder, disabled: props.disabled, readOnly: props.readOnly, error: props.error, onChange: props.onChange, onKeyPress: props.onKeyPress }),
+        props.error && (createElement(StyledErrorContainer$2, null,
             createElement(AiFillMinusCircle, { style: { fill: '#D82829', fontSize: '13px', padding: '0 5px' } }),
             " ",
-            errorText))));
+            props.errorText))));
 };
 
 export { StyledAutocompleteTextField, VdsAlert, VdsAutocomplete, VdsBreadcrumb, VdsButton, VdsChip, VdsDatepicker, VdsDialog, VdsDrawer, VdsPageTitle, VdsSelect, VdsSwitch, VdsTable, VdsTextField, VdsTooltip };

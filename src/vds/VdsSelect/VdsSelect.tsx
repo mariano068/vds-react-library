@@ -92,6 +92,8 @@ export const VdsSelect = (props: SelectProps) => {
 
     const { label, placeholder, errorText, helperText, children, fullWidth, ...MuiSelectProps } = props;
 
+
+
     return (
         <StyledTextFieldContainer>
             {label && <StyledInfosContainer>

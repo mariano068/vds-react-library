@@ -1,1 +1,2 @@
-export declare const VdsChip: ({ label, onDelete, disabled }: any) => JSX.Element;
+import { ChipProps } from "@mui/material";
+export declare const VdsChip: ({ label, onDelete, disabled }: ChipProps) => JSX.Element;

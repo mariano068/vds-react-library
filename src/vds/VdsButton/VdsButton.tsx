@@ -1,6 +1,6 @@
 import { Button, ButtonProps as VdsButtonProps, styled } from '@mui/material';
 
-export const VdsButton = styled(Button)(({ variant, color, size }: VdsButtonProps) => ({
+export const VdsButton = styled(Button)(({ variant, color }: VdsButtonProps) => ({
     fontSize: "16px",
     color: "#FFFFFF",
     letterSpacing: "0.2px",

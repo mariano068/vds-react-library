@@ -1,5 +1,6 @@
 {
   "name": "vds-react-library",
+  "homepage": "https://github.com/mariano068/vds-react-library.git",
   "version": "3.0.13",
   "description": "Made with create-react-library",
   "author": "",
@@ -21,9 +22,11 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && yarn install && yarn run build",
     "sb": "cls && start-storybook -p 6006",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=210fec9008b0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.7.1",
@@ -52,6 +55,7 @@
     "@typescript-eslint/parser": "^2.26.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.4.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
@@ -63,7 +67,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.2.3",
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
