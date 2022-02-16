@@ -5,7 +5,7 @@ const CodeHighlight: React.FC = ({ children }) => (
     style={{
       padding: '11px 1rem',
       margin: '1rem 0',
-      background: '#FFFFFF',
+      background: 'pink',
       border: '1px solid #C9D9E8',
       overflow: 'auto'
     }}

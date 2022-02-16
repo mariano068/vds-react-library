@@ -15,13 +15,10 @@ export const parameters = {
   },
   addons: {
     disable: true,
-},
-backgrounds: {
-  default: '#f2f5f8',
   },
   enableShortcuts: false
 }
 
 export const decorators = [
-	muiTheme()
+  muiTheme()
 ];
